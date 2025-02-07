@@ -1,255 +1,425 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Manhan| Healthcare Centre</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<main>
+			<section class="hero">
+				<div class="wrapper">
+					<header>
+						<nav>
+							<span class="logo">Manhan Hospital</span>
+							<div class="links">
+								<ul>
+									<li>Home</li>
+									<li>About</li>
+									<li>Application</li>
+									<li>History</li>
+								</ul>
 
-        header {
-            background: #f5f5f5;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #333;
-        }
-
-        .hero {
-            text-align: center;
-            background: #e8f3ff;
-            padding: 50px 20px;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            color: #0056b3;
-        }
-
-        .hero p {
-            color: #555;
-        }
-
-        .hero .search-bar {
-            margin-top: 20px;
-        }
-
-        .hero input {
-            padding: 10px;
-            margin-right: 5px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .hero button {
-            padding: 10px 20px;
-            background: #0056b3;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .hero button:hover {
-            background: #003f7f;
-        }
-
-        .stats {
-            display: flex;
-            justify-content: center;
-            background: #0056b3;
-            color: white;
-            padding: 20px 0;
-        }
-
-        .stats div {
-            margin: 0 20px;
-            text-align: center;
-        }
-
-        .specialists {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .specialists h2 {
-            margin-bottom: 20px;
-            color: #0056b3;
-        }
-
-        .specialists .card {
-            display: inline-block;
-            margin: 10px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 200px;
-            text-align: left;
-            background: #f9f9f9;
-            transition: transform 0.3s;
-        }
-
-        .specialists .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .testimonials {
-            background: #e8f3ff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .testimonials h2 {
-            color: #0056b3;
-            margin-bottom: 20px;
-        }
-
-        .footer {
-            background: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #ddd;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .newsletter {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .newsletter input {
-            padding: 10px;
-            width: 300px;
-            border: none;
-            border-radius: 5px 0 0 5px;
-        }
-
-        .newsletter button {
-            padding: 10px;
-            background: #0056b3;
-            color: #fff;
-            border: none;
-            border-radius: 0 5px 5px 0;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .newsletter button:hover {
-            background: #003f7f;
-        }
-
-        @media (max-width: 768px) {
-            .stats {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .stats div {
-                margin: 10px 0;
-            }
-
-            .specialists .card {
-                width: 90%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div>Manhan</div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Specialists</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>Find and Search Your Favourite Doctor</h1>
-        <p>Connect with top specialists and get reliable medical advice online.</p>
-        <div class="search-bar">
-            <input type="text" placeholder="Search by name or specialty">
-            <input type="text" placeholder="Enter location">
-            <button onclick="performSearch()">Search</button>
-        </div>
-    </section>
-
-    <section class="stats">
-        <div>
-            <h3>24/7</h3>
-            <p>Online Support</p>
-        </div>
-        <div>
-            <h3>100+</h3>
-            <p>Doctors</p>
-        </div>
-        <div>
-            <h3>1M+</h3>
-            <p>Happy Patients</p>
-        </div>
-    </section>
-
-    <section class="specialists">
-        <h2>Our Consulting Specialists</h2>
-        <div class="card">
-            <h3>Covid-19 Test</h3>
-            <p>Get reliable testing services at your location.</p>
-        </div>
-        <div class="card">
-            <h3>Heart & Lung</h3>
-            <p>Consult with cardiology and pulmonary experts.</p>
-        </div>
-        <div class="card">
-            <h3>Supplement</h3>
-            <p>Get advice on the best supplements for your health.</p>
-        </div>
-        <div class="card">
-            <h3>Mental Health</h3>
-            <p>Connect with professional counselors and therapists.</p>
-        </div>
-    </section>
-
-    <section class="testimonials">
-        <h2>What Our Members Are Saying</h2>
-        <p>"Manhan helped me find the right specialist in no time! Highly recommend!"</p>
-        <p>- Bright Omondi</p>
-    </section>
-
-    <section class="newsletter">
-        <h2>Subscribe to Our Newsletter</h2>
-        <input type="email" placeholder="Enter your email">
-        <button onclick="subscribeNewsletter()">Subscribe</button>
-    </section>
-
-    <footer class="footer">
-        <p>&copy; 2025 Ashley. All Rights Reserved.</p>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-    </footer>
-
-    <script>
-        function performSearch() {
-            alert('Search functionality is not implemented yet.');
-        }
-
-        function subscribeNewsletter() {
-            alert('Thank you for subscribing to our newsletter!');
-        }
-    </script>
-</body>
+								<div class="auth">
+									<a class="log" href="">Log In</a>
+									<a class="sign" href="">Sign Up</a>
+								</div>
+							</div>
+							<div class="auth-desk">
+								<a class="log" href="">Log In</a>
+								<a class="sign" href="">Sign Up</a>
+							</div>
+							<button class="burger">
+								<img src="./assets/images/burger.svg" alt="" />
+							</button>
+						</nav>
+					</header>
+					<div class="hero__wrap">
+						<div class="hero__text-side">
+							<h1 class="hero__title">
+								Find & Search Your
+								<span class="blue-span">Favourite</span> Doctor
+							</h1>
+							<p class="hero__text">
+								Connect with top-rated healthcare professionals
+								in your area. Our trusted network of specialists
+								ensures you receive the highest quality medical
+								care tailored to your needs.
+							</p>
+							<div>
+								<div class="select-control">
+									<select name="names" id="">
+										<option value="">Doctor's Name</option>
+										<option value="1">Cardiology</option>
+										<option value="2">Dermatology</option>
+									</select>
+									<select name="locations" id="">
+										<option value="">Location</option>
+										<option value="1">New York</option>
+										<option value="2">Los Angeles</option>
+									</select>
+									<button class="hero__btn">
+										<img
+											src="./assets/images/search.svg"
+											alt=""
+										/>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="hero__image-side">
+							<img
+								src="./assets/images/hero-img (2).jpg"
+								alt=""
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="stats">
+					<div class="wrapper">
+						<div class="stats__wrap">
+							<div class="stats__item">
+								<h3
+									class="stats__item-title"
+									data-target="90"
+									data-suffix="%"
+								>
+									90%
+								</h3>
+								<p class="stats__item-text">Receovery Rate</p>
+							</div>
+							<div class="stats__item">
+								<h3
+									class="stats__item-title"
+									data-target="500"
+									data-suffix="+"
+								>
+									500+
+								</h3>
+								<p class="stats__item-text">Doctors</p>
+							</div>
+							<div class="stats__item">
+								<h3
+									class="stats__item-title"
+									data-target="100"
+									data-suffix="K+"
+								>
+									100K+
+								</h3>
+								<p class="stats__item-text">Active Patients</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="specialists">
+				<div class="wrapper">
+					<div class="specialists__wrap">
+						<h2 class="specialists__head">
+							Our Consulting Specialists
+						</h2>
+						<div class="specialists__fields">
+							<div class="specialists__fields-field">
+								<img
+									src="./assets/images/covid-19.svg"
+									alt=""
+								/>
+								<h3 class="title">Covid-19 Test</h3>
+								<p class="text">
+									Rapid and reliable COVID-19 testing services
+									with expert consultation.
+								</p>
+							</div>
+							<div class="specialists__fields-field">
+								<img src="./assets/images/lungs.svg" alt="" />
+								<h3 class="title">Heart Lungs</h3>
+								<p class="text">
+									Comprehensive cardiovascular and respiratory
+									care from experienced specialists.
+								</p>
+							</div>
+							<div class="specialists__fields-field">
+								<img
+									src="./assets/images/suppliment.svg"
+									alt=""
+								/>
+								<h3 class="title">Suppliment</h3>
+								<p class="text">
+									Professional guidance on nutritional
+									supplements and vitamins with
+									recommendations.
+								</p>
+							</div>
+							<div class="specialists__fields-field">
+								<img
+									src="./assets/images/mental-health.svg"
+									alt=""
+								/>
+								<h3 class="title">Mental Health</h3>
+								<p class="text">
+									Compassionate mental health support from
+									qualified professionals and counselling
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="whyus">
+				<div class="wrapper">
+					<div class="whyus__wrap">
+						<div class="whyus__image">
+							<img src="./assets/images/why-us.jpg" alt="" />
+						</div>
+						<div class="whyus__text">
+							<h2 class="whyus__text-head">Why You Choose Us?</h2>
+							<div class="whyus__text-desc">
+								<div class="statements">
+									<img
+										src="./assets/images/why-tick.svg"
+										alt=""
+									/>
+									<p>
+										Experienced doctors with world-class
+										medical training.
+									</p>
+								</div>
+								<div class="statements">
+									<img
+										src="./assets/images/why-tick.svg"
+										alt=""
+									/>
+									<p>
+										Advanced medical technology for accurate
+										diagnoses.
+									</p>
+								</div>
+								<div class="statements">
+									<img
+										src="./assets/images/why-tick.svg"
+										alt=""
+									/>
+									<p>
+										24/7 emergency care with rapid response.
+									</p>
+								</div>
+								<div class="statements">
+									<img
+										src="./assets/images/why-tick.svg"
+										alt=""
+									/>
+									<p>
+										Affordable healthcare plans for every
+										patient.
+									</p>
+								</div>
+								<div class="statements">
+									<img
+										src="./assets/images/why-tick.svg"
+										alt=""
+									/>
+									<p>
+										Patient-centered approach with
+										personalized treatment plans.
+									</p>
+								</div>
+							</div>
+							<div class="whyus__text-button">
+								<a href="#" class="button">
+									<span>Learn More</span>
+									<img
+										src="./assets/images/link-arrow.svg"
+										alt=""
+									/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="wrapper">
+					<div class="reviews__wrap">
+						<div class="reviews__text">
+							<h2 class="reviews__text-head">
+								What
+								<span class="blue-span">our members</span> say
+								about us
+							</h2>
+							<p class="reviews__text-desc">
+								Real experiences shared by patients who have
+								trusted us with their healthcare journey.
+							</p>
+							<div class="reviews__text-num">
+								<div class="user-icons">
+									<img
+										src="./assets/images/reviews-image.png"
+										alt=""
+									/>
+									<img
+										src="./assets/images/reviews-image2.png"
+										alt=""
+									/><img
+										src="./assets/images/reviews-image3.png"
+										alt=""
+									/><img
+										src="./assets/images/reviews-image4.png"
+										alt=""
+									/><img
+										src="./assets/images/reviews-image5.png"
+										alt=""
+									/><img
+										src="./assets/images/reviews-image6.png"
+										alt=""
+									/>
+								</div>
+								<p>100+ Reviews</p>
+							</div>
+						</div>
+						<div class="reviews__example">
+							<div class="example-head">
+								<div class="person">
+									<img
+										src="./assets/images/reviews-image.png"
+										alt=""
+									/>
+									<div>
+										<h3>Jane Cooper</h3>
+										<span>12/4/17</span>
+									</div>
+								</div>
+								<img
+									src="./assets/images/rating.webp"
+									class="image-head"
+									alt=""
+								/>
+							</div>
+							<p class="example-desc">
+								I cannot express how grateful I am for the
+								exceptional care I received. Dr. Thompson was
+								not only highly skilled but also incredibly
+								compassionate. The staff made sure I was
+								comfortable throughout my treatment, and the
+								follow-up care was outstanding. The online
+								booking system made scheduling appointments
+								effortless, and wait times were minimal. I've
+								recommended this clinic to all my family
+								members.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="future">
+				<div class="wrapper">
+					<div class="future__wrap">
+						<div class="future__text">
+							<h2 class="future__text-head">
+								The Future of
+								<span class="blue-span">Quality Heath</span>
+							</h2>
+							<p class="future__text-desc">
+								We're revolutionizing healthcare delivery
+								through advanced technology and personalized
+								care. Our state-of-the-art facilities combine
+								cutting-edge medical equipment with
+								compassionate healthcare professionals who
+								understand your unique needs. We're investing in
+								telemedicine, AI-assisted diagnostics, and
+								preventive care programs to make quality
+								healthcare more accessible and efficient. Our
+								commitment goes beyond treatment – we focus on
+								education, prevention, and long-term wellness
+								strategies that empower our patients to lead
+								healthier lives.
+							</p>
+							<div class="whyus__text-button">
+								<a href="#" class="button">
+									<span>Learn More</span>
+									<img
+										src="./assets/images/link-arrow.svg"
+										alt=""
+									/>
+								</a>
+							</div>
+						</div>
+						<div class="future__image">
+							<img src="./assets/images/future.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="suiscribe">
+				<div class="wrapper">
+					<div class="suiscribe__wrap">
+						<h2 class="suiscribe__head">
+							Subscribe to our Newsletter
+						</h2>
+						<form action="">
+							<div class="form-control">
+								<input type="email" name="" id="" />
+								<button>
+									<img
+										src="./assets/images/link-white.svg"
+										alt=""
+									/>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<footer>
+				<div class="wrapper">
+					<div class="footer__wrap">
+						<div class="footer-cols">
+							<div class="footer-col">
+								<span class="logo">Manhan Hoapital</span>
+								<p class="text">
+									Expert medical care tailored to your unique
+									needs. Our team of professionals is
+									committed to delivering comprehensive
+									treatment, improving health, and fostering
+									well-being. Advanced technology and
+									compassionate service ensure you receive the
+									highest standard of care. Schedule your
+									consultation today for a healthier tomorrow.
+								</p>
+								<div class="icons">
+									<img
+										src="./assets/images/fb-icon.svg"
+										alt=""
+									/>
+									<img
+										src="./assets/images/ig-icon.svg"
+										alt=""
+									/>
+									<img
+										src="./assets/images/twitter.svg"
+										alt=""
+									/>
+								</div>
+							</div>
+							<div class="footer-col-links">
+								<h3>Useful Links</h3>
+								<ul>
+									<li>About Us</li>
+									<li>Privacy Policy</li>
+									<li>Our Mission</li>
+									<li>Our Team</li>
+								</ul>
+							</div>
+							<div class="footer-col-address">
+								<h3>Address</h3>
+								<img src="./assets/images/address.png" alt="" />
+							</div>
+						</div>
+						<p class="copyright">&copy; 2025 All Rights Reserved</p>
+					</div>
+				</div>
+			</footer>
+		</main>
+		<script src="./assets/js/index.js"></script>
+	</body>
 </html>
